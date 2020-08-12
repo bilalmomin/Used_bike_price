@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <meta charset="UTF-8">
+   <title>Used Bike Price</title>
+</head>
+<body >
+    <div style="background: url(https://images.unsplash.com/photo-1547549082-6bc09f2049ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80)"  class="page-holder bg-cover">
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand " href="#"><h2>Used Bike Price</h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <a class="navbar-brand" href="#">Home Page</a>
+                <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+        <br><br><br>
+        
+        <div class="container">
+
+
+
+            <form action="\predict" method="post">
+
+
+                    
+
+                
+
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="card text-center">
+                            <div class="card text-white bg-secondary mb-0">
+                                <div class="card-body">
+                                    <!-- Source -->
+                                    <h5 class="card-title">Please select the  Model</h5>
+                                    <select name="bike_model" id="bike_model" required="required">
+                                        <option value="TVS Star">TVS Star</option>
+                                        <option value="Royal Enfield">Royal Enfield</option>
+                                        <option value="TVS Apache">TVS Apache</option>
+                                        <option value="Yamaha FZ V 2.0">Yamaha FZ V 2.0</option>
+                                        <option value="Yamaha FZs">Yamaha FZs</option>
+                                        <option value="Honda CB Hornet">Honda CB Hornet</option>
+                                        <option value="Hero Splendor">Hero Splendor</option>
+                                        <option value="Yamaha YZF-R15 V 2.0">Yamaha YZF-R15 V 2.0</option>
+                                        <option value="Yamaha FZ25">Yamaha FZ25</option>
+                                        <option value="Bajaj Pulsar">Bajaj Pulsar</option>
+                                        <option value="Bajaj Discover">Bajaj Discover</option>
+                                        <option value="Suzuki Gixxer">Suzuki Gixxer</option>
+                                        <option value="UM Renegade">UM Renegade</option>
+                                        <option value="Hero Super">Hero Super</option>
+                                        <option value="Honda CBF Stunner">Honda CBF Stunner</option>
+                                        <option value="Bajaj Avenger">Bajaj Avenger</option>
+                                        <option value="KTM RC">KTM RC</option>
+                                        <option value="Honda CB Unicorn">Honda CB Unicorn</option>
+                                        <option value="KTM Duke">KTM Duke</option>
+                                        <option value="Honda CBR 150R">Honda CBR 150R</option>
+                                        <option value="Mahindra Centuro">Mahindra Centuro</option>
+                                        <option value="Hero Hunk">Hero Hunk</option>
+                                        <option value="Yamaha FZ">Yamaha FZ</option>
+                                        <option value="Honda CB Shine">Honda CB Shine</option>
+                                        <option value="Benelli TNT">Benelli TNT</option>
+                                        <option value="Honda Dream">Honda Dream</option>
+                                        <option value="Hero CD">Hero CD</option>
+                                        <option value="Kawasaki Ninja">Kawasaki Ninja</option>
+                                        <option value="Bajaj Platina">Bajaj Platina</option>
+                                        <option value="Hero Karizma">Hero Karizma</option>
+                                        <option value="Harley-Davidson Street">Harley-Davidson Street</option>
+                                        <option value="Bajaj CT">Bajaj CT</option>
+                                        <option value="Yamaha FZ16">Yamaha FZ16</option>
+                                        <option value="Bajaj V15">Bajaj V15</option>
+                                        <option value="Honda CBR 250R">Honda CBR 250R</option>
+                                        <option value="Hyosung GT650R">Hyosung GT650R</option>
+                                        <option value="Yamaha YZF-R15">Yamaha YZF-R15</option>
+                                        <option value="Honda CB ShineSP">Honda CB ShineSP</option>
+                                        <option value="Hero Passion">Hero Passion</option>
+                                        <option value="Bajaj Dominar">Bajaj Dominar</option>
+                                        <option value="Yamaha Fazer">Yamaha Fazer</option>
+                                        <option value="Harley-Davidson Iron">Harley-Davidson Iron</option>
+                                        <option value="Hero HF">Hero HF</option>
+                                        <option value="TVS Sport">TVS Sport</option>
+                                        <option value="Honda Livo">Honda Livo</option>
+                                        <option value="Yamaha SZ-RR">Yamaha SZ-RR</option>
+                                        <option value="Yamaha Saluto">Yamaha Saluto</option>
+                                        <option value="Hyosung Aquila">Hyosung Aquila</option>
+                                        <option value="Bajaj V12">Bajaj V12</option>
+                                        <option value="Honda CB Twister">Honda CB Twister</option>
+                                        <option value="Harley-Davidson Fat">Harley-Davidson Fat</option>
+                                        <option value="Suzuki Intruder">Suzuki Intruder</option>
+                                        <option value="Mahindra Mojo">Mahindra Mojo</option>
+                                        <option value="Hero Ignitor">Hero Ignitor</option>
+                                        <option value="Hero Glamour">Hero Glamour</option>
+                                        <option value="Suzuki Slingshot">Suzuki Slingshot</option>
+                                        <option value="Honda CB Trigger">Honda CB Trigger</option>
+                                        <option value="Hyosung GT250R">Hyosung GT250R</option>
+                                        <option value="Hero Xtreme">Hero Xtreme</option>
+                                        <option value="Yamaha SZR">Yamaha SZR</option>
+                                        <option value="Hero CBZ 150cc">Hero CBZ 150cc</option>
+                                        <option value="Yamaha FZS">Yamaha FZS</option>
+                                        <option value="Hero CBZ Xtreme">Hero CBZ Xtreme</option>
+                                        <option value="Hero Honda">Hero Honda</option>
+                                        <option value="TVS Apache V 2.0">TVS Apache V 2.0</option>
+                                        <option value="TVS Victor">TVS Victor</option>
+                                        <option value="Honda CD">Honda CD</option>
+                                        <option value="Bajaj ">Bajaj </option>
+                                        <option value="Suzuki Zeus">Suzuki Zeus</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="card text-center">
+                            <div class="card text-white bg-secondary mb-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cubic Capacity (CC)</h5>
+                                    <!-- Destination -->
+                                    <select name="cubic_capacity" id="cubic_capacity" required="required">
+                                        <option value="110">110 Cc</option>
+                                        <option value="350">350 Cc</option>
+                                        <option value="180">180 Cc</option>
+                                        <option value="150">150 Cc</option>
+                                        <option value="160">160 Cc</option>
+                                        <option value="100">100 Cc</option>
+                                        <option value="500">500 Cc</option>
+                                        <option value="250">250 Cc</option>
+                                        <option value="200">200 Cc</option>
+                                        <option value="125">125 Cc</option>
+                                        <option value="201">201 Cc</option>
+                                        <option value="220">220 Cc</option>
+                                        <option value="390">390 Cc</option>
+                                        <option value="600">600 Cc</option>
+                                        <option value="650">650 Cc</option>
+                                        <option value="223">223 Cc</option>
+                                        <option value="410">410 Cc</option>
+                                        <option value="135">135 Cc</option>
+                                        <option value="300">300 Cc</option>
+                                        <option value="750">750 Cc</option>
+                                        <option value="400">400 Cc</option>
+                                        <option value="883">883 Cc</option>
+                                        <option value="899">899 Cc</option>
+                                        <option value="535">535 Cc</option>
+                                        <option value="113">113 Cc</option>
+                                        <option value="310">310 Cc</option>
+                                        <option value="149">149 Cc</option>
+                                        <option value="202">202 Cc</option>
+                                        <option value="107">107 Cc</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="card text-center">
+                            <div class="card text-white bg-secondary mb-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Please select the Year</h5>
+                                    <!-- Year -->
+                                    <select name="year" id="year">
+                                        <option value="">Select Year</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        for(y = 1990; y <= 2500; y++) {
+                                var optn = document.createElement("OPTION");
+                                optn.text = y;
+                                optn.value = y;
+                                
+                                // if year is 2015 selected
+                                if (y == 2020) {
+                                    optn.selected = true;
+                                }
+                                
+                                document.getElementById('year').options.add(optn);
+                        }
+                        </script>
+                    <div class="col-sm-5">
+                        <div class="card text-center">
+                            <div class="card text-white bg-secondary mb-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Please choose the Location</h5>
+                                    <!-- Location -->
+                                    <select name="location" id="location" required="required">
+                                        <option value='Gujarat'>Gujarat</option>
+                                        <option value='Delhi'>Delhi</option>
+                                        <option value='Karnataka'>Karnataka</option>
+                                        <option value='Maharashtra'>Maharashtra</option>
+                                        <option value='Orissa'>Orissa</option>
+                                        <option value='Haryana'>Haryana</option>
+                                        <option value='Uttar Pradesh'>Uttar Pradesh</option>
+                                        <option value='Kerala'>Kerala</option>
+                                        <option value='Bihar'>Bihar</option>
+                                        <option value='Rajasthan'>Rajasthan</option>
+                                        <option value='Tamil Nadu'>Tamil Nadu</option>
+                                        <option value='Other'>Other</option>
+                                        <option value='Punjab'>Punjab</option>
+                                        <option value='Andhra Pradesh'>Andhra Pradesh</option>
+                                        <option value='West Bengal'>West Bengal</option>
+                                        <option value='Himachal Pradesh'>Himachal Pradesh</option>
+                                        <option value='Madhya Pradesh'>Madhya Pradesh</option>
+                                        <option value='Chhattisgarh'>Chhattisgarh</option>
+                                        <option value='Chandigarh '>Chandigarh </option>
+                                        <option value='Jharkhand'>Jharkhand</option>
+                                        <option value='Uttaranchal'>Uttaranchal</option>
+                                        <option value='Jammu & Kashmir'>Jammu & Kashmir</option>
+                                        <option value='Assam'>Assam</option>
+                                        <option value='Sikkim'>Sikkim</option>
+                                        <option value='Goa'>Goa</option>
+                                        <option value='Pondicherry '>Pondicherry </option>
+                                        <option value='Tripura'>Tripura</option>
+                                        <option value='Arunachal Pradesh'>Arunachal Pradesh</option>
+                                        <option value='Meghalaya'>Meghalaya</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="card text-center">
+                            <div class="card text-white bg-secondary mb-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Distance travelled</h5>
+                                    <!--Running-->
+                                    <input type="number" placeholder="distance" name="distance">                                    
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        function getInputValue()
+                        {
+                            // Selecting the input element and get its value 
+                            var inputVal = document.getElementById("distance").value;
+                            
+                            // Displaying the value
+                            alert(inputVal);
+                        }
+                    </script>
+                    <div class="col-sm-5">
+                        <div class="card text-center">
+                            <div class="card text-white bg-secondary mb-0">
+                                <div class="card-body">
+                                    <h5 class="card-title">Number of Owner</h5>
+                                    <!-- Owner -->
+                                    <select name="owner" id="owner" required="required">
+                                        <option value="First owner">First owner</option>
+                                        <option value="Second owner">Second owner</option>
+                                        <option value="Third owner">Third owner</option>
+                                        <option value="Fourth owner or more">Fourth owner or more</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Submit -->
+                
+                
+                <div>
+                    <button type="submit" value="Predict" class="btn btn-success btn-lg btn-block" >Predict</button>
+
+                        
+                    
+                </div>
+                
+                
+            </form>
+
+
+            <br>
+            <br>
+            <div class="col-sm-5">
+                <div class="card text-center">
+                    <div class="card text-white bg-warning mb-0">
+                        <div class="card-body">
+                             <h3>{{ prediction_text }}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <br>
+            <p>©2020 Bilal Momin</p>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
