@@ -2,10 +2,12 @@ from flask import Flask,request,render_template
 import pandas as pd 
 import pickle
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
 
 app=Flask(__name__)
 model=pickle.load(open('bike_price.pkl','rb'))
-
+print(type(model))
 @app.route("/")
 def home():
     return render_template("home.html")
@@ -226,76 +228,76 @@ def predict():
             Cubic_Capacity = 107
 
         #Year
-        year=0
-        yr=request.form['year']
-        year=yr
+        
+        Year=request.form['year']
+        
 
         #Location
-        location=0
+        Location=0
         place=request.form['location']
         if place == 'Gujarat':
-        	location= 1166
+        	Location= 1166
         elif place == 'Delhi':
-            location= 7345
+            Location= 7345
         elif place == 'Karnataka':
-            location= 2781
+            Location= 2781
         elif place == 'Maharashtra':
-            location= 4584
+            Location= 4584
         elif place == 'Orissa':
-            location= 68
+            Location= 68
         elif place == 'Haryana':
-            location= 1921
+            Location= 1921
         elif place == 'Uttar Pradesh':
-            location= 6713
+            Location= 6713
         elif place == 'Kerala':
-            location= 654
+            Location= 654
         elif place == 'Bihar':
-            location= 71
+            Location= 71
         elif place == 'Rajasthan':
-            location= 2306
+            Location= 2306
         elif place == 'Tamil Nadu':
-            location= 1692
+            Location= 1692
         elif place == 'Other':
-            location= 2054
+            Location= 2054
         elif place == 'Punjab':
-            location= 833
+            Location= 833
         elif place == 'Andhra Pradesh':
-            location= 58
+            Location= 58
         elif place == 'West Bengal':
-            location= 809
+            Location= 809
         elif place == 'Himachal Pradesh':
-            location= 16
+            Location= 16
         elif place == 'Madhya Pradesh':
-            location= 736
+            Location= 736
         elif place == 'Chhattisgarh':
-            location= 22
+            Location= 22
         elif place == 'Chandigarh ':
-            location= 47
+            Location= 47
         elif place == 'Jharkhand':
-            location= 30
+            Location= 30
         elif place == 'Uttaranchal':
-            location= 60
+            Location= 60
         elif place == 'Jammu & Kashmir':
-            location= 13
+            Location= 13
         elif place == 'Assam':
-            location= 46
+            Location= 46
         elif place == 'Sikkim':
-            location= 3
+            Location= 3
         elif place == 'Goa':
-            location= 6
+            Location= 6
         elif place == 'Pondicherry ':
-            location= 9
+            Location= 9
         elif place == 'Tripura':
-            location= 12
+            Location= 12
         elif place == 'Arunachal Pradesh':
-            location= 1
+            Location= 1
         else:
-            location= 2
+            Location= 2
 
         #Running
-        running=0
-        distance1=request.form.get('distance')
-        running=distance1
+        
+        Running=request.form.get('distance')
+        
         
         #Owner
         Second_owner=0
@@ -310,10 +312,15 @@ def predict():
         elif owner=='Fourth Owner Or More':
             Fourth_owner_or_more=1
 
+        
+        input_variables = pd.DataFrame([[Cubic_Capacity,Year,Running,Second_owner,Third_owner,Fourth_owner_or_more,Bike_Model,Location]],
+        columns=['Cubic_Capacity','Year','Running','Second_owner','Third_owner','Fourth_owner_or_more','Bike_Model','Location'],
+        dtype=float)
+        
 
-        prediction=model.predict([[Cubic_Capacity,year,running,Second_owner,Third_owner,Fourth_owner_or_more,Bike_Model,location]])
-
-        output=round(prediction[0],2)
+        #prediction=model.predict([[Cubic_Capacity,year,running,Second_owner,Third_owner,Fourth_owner_or_more,Bike_Model,location]])
+        prediction=model.predict(input_variables)
+        output=round(prediction[0])
 
         return render_template('home.html',prediction_text="Your Bike price is Rs. {}".format(output))
 
